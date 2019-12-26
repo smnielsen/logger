@@ -1,0 +1,35 @@
+{
+  "name": "@smnielsen/logger",
+  "version": "0.0.0",
+  "description": "Logger with levels for both browser and Node",
+  "main": "dist/index.js",
+  "repository": "git@github.com:smnielsen/logger.git",
+  "author": "Simon Nielsen <simonnielsen@live.se>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "yarn run mocha:unit",
+    "test:ci": "LOG_LEVEL=error nyc mocha -r ts-node/register 'src/**/*.spec.ts'",
+    "mocha:unit": "LOG_LEVEL=error mocha -r ts-node/register 'src/**/*.spec.ts'"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.0",
+    "@smnielsen/eslint-config": "^0.0.3",
+    "@smnielsen/prettier-config": "^0.0.3",
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "sinon": "^8.0.1",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "cli-color": "^2.0.0"
+  }
+}
