@@ -2,12 +2,12 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import { getTimeString } from './time';
 
-describe('Logger', () => {
+describe('Time', () => {
   let clock: any;
   beforeEach(() => {
     const now = new Date('2019-12-26T17:23:02');
     clock = sinon.useFakeTimers(now.getTime());
-    console.log('Test now', now.getTime());
+    console.log('Test now', now.toUTCString());
   });
   afterEach(() => {
     //assertions
